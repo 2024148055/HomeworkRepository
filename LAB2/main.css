@@ -1,0 +1,72 @@
+/*
+background-color
+text-align O
+padding O
+margin O
+border O
+font-size
+font-family O
+color O
+width
+height
+ */
+* {
+    text-align: center;
+    font-family: "Bookman Old Style", "SansSerif";
+}
+
+p { font-size: medium;}
+
+a.curLoc {
+    color: gray;
+}
+
+form {
+    padding: 20px 60px 20px 20px;
+    margin: 30px 100px;
+    border: black solid 3px;
+}
+
+form label, form p {
+    text-align: start;
+}
+
+form p label {
+    text-align: start;
+    display: inline-block;
+    width: 220px;
+    margin: 0px 50px 0px 0px;
+    border-color: black;
+}
+
+form p input {
+    text-align: start;
+    width: 200px;
+}
+
+input:focus {background-color: HSLA(195, 100%, 60%, 0.3)}
+
+.blockElm {display: block;}
+.LongText {
+    width: 300px;
+}
+input[name="Gender"] {
+    width: auto;
+}
+
+.Button {
+    width: 80px;
+    height: 30px;
+    font-size: small;
+    border-radius: 20px;
+    border-width: 0px;
+}
+
+.Button[type="submit"]{
+    background: lightskyblue;
+}
+
+.Button[type="reset"]{
+    background: red;
+    color: white;
+}
