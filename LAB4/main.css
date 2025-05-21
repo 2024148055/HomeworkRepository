@@ -1,0 +1,218 @@
+/*
+background-color 0
+text-align O
+padding O
+margin O
+border O
+font-size
+font-family O
+color O
+width 0
+height 0
+ */
+* {
+    font-family: "Bookman Old Style", "sans-serif";
+}
+
+.signUpPage h1, .logInPage h1 {text-align: center;}
+.signUpPage nav, .logInPage nav {text-align: center;}
+
+p { font-size: medium;}
+
+a.curLoc {
+    color: gray;
+}
+
+form {
+    width: 450px;
+    padding: 20px 60px 20px 20px;
+    margin: 30px auto;
+    border: black solid 3px;
+}
+
+form label, form p {
+    text-align: start;
+}
+
+form p label {
+    text-align: start;
+    display: inline-block;
+    width: 200px;
+    margin: 0px 50px 0px 0px;
+    border-color: black;
+}
+
+form p input {
+    text-align: start;
+    width: 150px;
+}
+
+input:focus {background-color: HSLA(195, 100%, 60%, 0.3)}
+
+.blockElm {display: block;}
+.LongText {
+    width: 300px;
+}
+input[name="Gender"] {
+    width: auto;
+}
+
+.Button {
+    width: 80px;
+    height: 30px;
+    font-size: small;
+    text-align: center;
+    border-radius: 20px;
+    border-width: 0px;
+}
+
+.Button[type="submit"]{
+    background: lightskyblue;
+}
+
+.Button[type="reset"]{
+    background: red;
+    color: white;
+}
+
+/* 윗부분은 로그인/회원가입 스타일
+------------------------------------------------
+지금부터 메인페이지 스타일*/
+
+.homePage {
+    width: 100%;
+    max-width: 1020px;
+    display: flex;
+    flex-direction: column;       /* 세로 방향 레이아웃 유지 */
+    align-items: center;          /* 가로축(수평) 중앙 정렬 */
+    margin: 0 auto;
+}
+
+#Search {width: 100%;}
+
+.homePage form {
+    width: 100%;
+    height: 25px;
+    margin: 25px 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.homePage form input {height: 100%;}
+
+#TagInput {width: 60%; margin: 0 5%}
+#resultButton {width: 15%;}
+
+.homePage nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.homePage nav::after, .homePage h4::after {
+    width: 100%;
+    content: "";
+    display: block;
+    border-top: gray solid 3px;
+    margin-top: 10px;
+    column-span: all;
+}
+
+.homePage h1 {
+    align-self: flex-start;
+    width: 254px;
+    text-align: right;
+    animation-name: Slide;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes Slide {
+    from {width: 1020px;}
+    to {width: 254px}
+}
+
+#OuterContainer {
+    max-width: 1020px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#InnerContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#Movies {
+    border: black solid 3px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-grow: 0;
+}
+
+.MovieSubSet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: black solid 3px;
+    margin: 10px;
+    flex-basis: 25%;
+    flex-grow: 0;
+}
+
+.Movie {
+    width: 40%; height: 100%;
+}
+
+.Story {
+    margin: 0;
+    position: absolute;
+    top:0; right:0; bottom:0; left:0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+}
+
+.Movie footer {width: 100%; height: 30%; text-align: center;}
+.Movie .MovieImg {
+    position: relative;
+    width: 100%; height: 70%;
+    text-align: center;
+    text-wrap: wrap;
+    padding: 0px;
+    margin: 5px;}
+
+@media screen and (max-width: 800px) {
+    .MovieSubSet {
+        margin: 5px;
+        flex-basis: 45%;
+    }
+
+    .Story {
+        font-size: 15px;
+    }
+
+    #Movies {
+        flex-wrap: wrap;
+    }
+
+    #About {column-count: 1;}
+}
+
+@media screen and (max-width: 480px) {
+    .MovieSubSet {
+        flex-direction: column;
+        flex-basis: 90%;
+    }
+
+    .Story {
+        font-size: 50%;
+    }
+}

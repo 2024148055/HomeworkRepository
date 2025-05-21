@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <link rel = "stylesheet" type = "text/css" href = "main.css">
+</head>
+<!--
+select
+radio
+5 inputs,
+autofoucs
+placeholder
+required
+step
+autocomplete
+-->
+<body class="signUpPage">
+    <h1> Welcome to my Movie Site</h1>
+    <nav> <a href="Index.html">Home | </a>
+        <a href="login.html">Log in | </a>
+        <a href="signup.html" class="curLoc">Sign Up</a>
+    </nav>
+    <form autocomplete="on" id="info">
+        <!-- 기본 계정 정보 -->
+        <p>
+            <label>Name: </label>
+            <input type="text" id="name" size="12" maxlength="12" required autofocus>
+        </p>
+        <p>
+            <label>Username: </label>
+            <input type="text" id="username" size="12" maxlength="12" required>
+        </p>
+        <p>
+            <label>Email address: </label>
+            <input type="email" id="email" placeholder="yourEmail@gmail.com" required>
+        </p>
+        <p>
+            <label>Password: </label>
+            <input type="password" id="password" size="12" maxlength="12" required autocomplete="off">
+        </p>
+
+        <!-- 추가 정보 -->
+        <p>
+            <label>Date of Birth: </label>
+            <input type="date" id="dob">
+        </p>
+        <p>
+            <label>Grade / Year: </label>
+            <input type="number" id="grade" min="1" max="6" step="1">
+        </p>
+        <p>
+            <label class="blockElm">Gender: <br></label>
+            <label class="genderLabel">Male</label>
+            <input type="radio" name="Gender" value="Male">
+            <label class="genderLabel">Female</label>
+            <input type="radio" name="Gender" value="Female">
+            <label class="genderLabel">Prefer not to Say</label>
+            <input type="radio" name="Gender" value="Prefer not to Say">
+        </p>
+
+        <!-- 기타 정보 (설문) -->
+        <p class="survey">
+            <label class="LongText">How did you get to know our site?<br></label>
+            <select>
+                <option>Internet Ads</option>
+                <option selected>Recommendation from friends/family</option>
+                <option>By chance</option>
+                <option>Other</option>
+            </select>
+        </p>
+
+        <p>
+            <input type="submit" value="Submit" class="Button">
+            <input type="submit" value="Save" class="Button" formnovalidate>
+            <input type="reset" value="Clear" class="Button">
+        </p>
+    </form>
+</body>
+</html>

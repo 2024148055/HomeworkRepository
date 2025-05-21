@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+  <link rel = "stylesheet" type = "text/css" href = "main.css">
+</head>
+<body class="homePage">
+  <h1>Popular Movies</h1>
+  <nav>
+    <a href="Index.html" class="curLoc">Home</a>
+    <a href="login.html">Log in</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+  <section id="Search">
+      <form>
+          <input type="text" placeholder="Enter Keywords" id="TagInput">
+          <input type="button" value="Filter results" id="resultButton">
+      </form>
+      Tags : #Animation, #Comedy, #Family, #Adventure, #Fantasy, <br>
+      #Romance, #History, #Drama, #Horror, #Action, <br>
+      #Thriller, #Crime, #Science Fiction
+  </section>
+  <section id="OuterContainer">
+      <section id="InnerContainer">
+          <h4>Movies</h4>
+          <label>
+              Sort results by
+              <select id="sortKey">
+                  <option value="Alphabetical order" selected>Alphabetical order</option>
+                  <option value="Most Recent">Most Recent</option>
+                  <option value="Oldest">Oldest</option>
+                  <option value="Rating">Rating</option>
+              </select>
+          </label>
+          <section id="Movies"> </section>
+      </section>
+  </section>
+<script>
+    let movieImgs = document.querySelectorAll(".MovieImg");
+    let searchBar = document.getElementById("TagInput");
+    let searchButton = document.getElementById("resultButton");
+    let sortBy = document.getElementById("sortKey");
+    let movieData;
+    let movieArr;
+    let movieCount = 0;
+
+    fetch("/product.json")
+        .then((response) => {
+            if (response.ok) {return response;}
+            else throw Error("Error in Request");
+        })
+        .then((response) => {return response.json();})
+        .then(data => {movieData = movieArr = data;
+            data.sort(compareTitle);
+            addMovie(); addMovie();
+        })
+
+    sortBy.onchange = sortMovies;
+    searchBar.onsubmit = filterResults;
+    searchButton.onclick = filterResults;
+    window.addEventListener("scroll", () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {addMovie();}
+    })
+
+    function addMovie() {
+        let movieDoc = document.getElementById("Movies")
+        if (movieArr.length == 0) {
+            movieDoc.innerHTML = "<div>No movies with such tag exist for now</div>";
+            return;
+        }
+        if (movieCount > movieArr.length) {return;}
+        let movie1 = movieArr[movieCount++];
+        let EdgeCase = true;
+        let movie2;
+        if (movieCount < movieArr.length) {
+            EdgeCase = false;
+            movie2 = movieArr[movieCount++];
+        }
+
+        let subSet = document.createElement("section");
+        subSet.classList.add("MovieSubSet");
+        movieDoc.appendChild(subSet);
+
+        let movieInfo1 = document.createElement("div");
+        movieInfo1.classList.add("Movie");
+        subSet.appendChild(movieInfo1);
+
+        let movieImg1 = document.createElement("article");
+        movieImg1.classList.add("MovieImg");
+        movieImg1.onmouseover = displayStory;
+        movieImg1.onmouseout = hideStory;
+        movieImg1.innerHTML =
+            `<img src="/Posters/${movie1.posterLoc}.webp" alt="${movie1.title} Poster" width="100%" height="100%">
+                 <p class="Story">Story: <br>${movie1.overview}</p>`;
+
+        let movieFoot1 = document.createElement("footer");
+        movieFoot1.innerHTML = `Title : ${movie1.title} <br>📅 ${movie1.release_date} <br>⭐️ ${movie1.rating}`;
+
+        movieInfo1.appendChild(movieImg1); movieInfo1.appendChild(movieFoot1);
+
+        if (!EdgeCase) {
+            let movieInfo2 = document.createElement("div");
+            movieInfo2.classList.add("Movie");
+            subSet.appendChild(movieInfo2);
+
+            let movieImg2 = document.createElement("article");
+            movieImg2.classList.add("MovieImg");
+            movieImg2.onmouseover = displayStory;
+            movieImg2.onmouseout = hideStory;
+            movieImg2.innerHTML =
+                `<img src="/Posters/${movie2.posterLoc}.webp" alt="${movie2.title} Poster" width="100%" height="100%">
+                 <p class="Story">Story: <br>${movie2.overview}</p>`;
+
+            let movieFoot2 = document.createElement("footer");
+            movieFoot2.innerHTML = `Title : ${movie2.title} <br>📅 ${movie2.release_date} <br>⭐️ ${movie2.rating}`;
+
+            movieInfo2.appendChild(movieImg2); movieInfo2.appendChild(movieFoot2);
+        }
+    }
+
+    function displayStory() {
+        this.querySelector(".Story").style.opacity = "1";
+    }
+
+    function hideStory() {this.querySelector(".Story").style.opacity = "0";}
+
+    function emptyMovies() {
+        let movieDoc = document.getElementById("Movies");
+        movieDoc.innerHTML = "";
+        movieCount = 0;
+    }
+
+    function filterResults() {
+        emptyMovies();
+        let query = searchBar.value.toLowerCase();
+        movieArr = [];
+        if (query == "") {movieArr = movieData;}
+        else if (query.substring(0,1) == "#") {
+            let filter = query.substring(1,);
+            for (let i = 0; i < movieData.length; i++) {
+                let containsFilter = false;
+                movieData[i].tags.forEach((element) => {
+                    if (element.toLowerCase() == filter) {containsFilter = true;}
+                })
+                if (containsFilter) {
+                    movieArr.push(movieData[i]);
+                }
+            }
+        }
+        else {
+            const reg = new RegExp(query, "i");
+            for (let i = 0; i < movieData.length; i++) {
+                if (movieData[i].title.search(reg) !== -1) {
+                    movieArr.push(movieData[i]);
+                }
+            }
+        }
+        sortMovies();
+    }
+
+    function sortMovies() {
+        let sortKey = sortBy.value;
+        emptyMovies();
+        if (sortKey == "Alphabetical order") {movieArr.sort(compareTitle);}
+        else if (sortKey == "Most Recent") {movieArr.sort(compareDate); movieArr.reverse();}
+        else if (sortKey == "Oldest") {movieArr.sort(compareDate);}
+        else if (sortKey == "Rating") {movieArr.sort(compareRating);}
+        addMovie(); addMovie();
+    }
+
+    // comparing functions
+    function compareDate(movie1, movie2) {
+        let date1 = movie1.release_date;
+        let date2 = movie2.release_date;
+        if (parseInt(date1.slice(0, 4)) > parseInt(date2.slice(0, 4))) {return 1;}
+        else if (parseInt(date1.slice(0, 4)) < parseInt(date2.slice(0, 4))) {return -1;}
+
+        if (parseInt(date1.slice(5, 7)) > parseInt(date2.slice(5, 7))) {return 1;}
+        else if (parseInt(date1.slice(5, 7)) < parseInt(date2.slice(5, 7))) {return -1;}
+
+        if (parseInt(date1.slice(8, 10)) > parseInt(date2.slice(8, 10))) {return 1;}
+        else if (parseInt(date1.slice(8, 10)) < parseInt(date2.slice(8, 10))) {return -1;}
+
+        return 0;
+    }
+
+    function compareRating(movie1, movie2) {return movie2.rating - movie1.rating;}
+
+    function compareTitle(movie1, movie2) {
+        const title1 = movie1.title.toUpperCase();
+        const title2 = movie2.title.toUpperCase();
+
+        if (title1 < title2) return -1;
+        if (title1 > title2) return 1;
+        return 0;
+    }
+</script>
+</body>
+</html>

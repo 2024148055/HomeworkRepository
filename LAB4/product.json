@@ -1,0 +1,240 @@
+[
+  {
+    "title": "Toy Story",
+    "tags": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "overview": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+    "rating": 7.7,
+    "release_date": "1995-10-30",
+    "posterLoc": "ToyStoryPoster"
+  },
+  {
+    "title": "Jumanji",
+    "tags": [
+      "Adventure",
+      "Fantasy",
+      "Family"
+    ],
+    "overview": "When siblings Judy and Peter discover an enchanted board game that opens the door to a magical world, they unwittingly invite Alan -- an adult who's been trapped inside the game for 26 years -- into their living room. Alan's only hope for freedom is to finish the game, which proves risky as all three find themselves running from giant rhinoceroses, evil monkeys and other terrifying creatures.",
+    "rating": 6.9,
+    "release_date": "1995-12-15",
+    "posterLoc": "JumanjiPoster"
+  },
+  {
+    "title": "Grumpier Old Men",
+    "tags": [
+      "Romance",
+      "Comedy"
+    ],
+    "overview": "A family wedding reignites the ancient feud between next-door neighbors and fishing buddies John and Max. Meanwhile, a sultry Italian divorcée opens a restaurant at the local bait shop, alarming the locals who worry she'll scare the fish away. But she's less interested in seafood than she is in cooking up a hot time with Max.",
+    "rating": 6.5,
+    "release_date": "1995-12-22",
+    "posterLoc": "GrumpierOldMenPoster"
+  },
+  {
+    "title": "Across the Sea of Time",
+    "tags": [
+      "Adventure",
+      "History",
+      "Drama",
+      "Family"
+    ],
+    "overview": "A young Russian boy, Thomas Minton, travels to New York as a passenger on a Russian freighter. Close to Ellis Island he gets off and thus starts his journey to America the same way as all immigrants in former times. Thomas is searching for the family of one of his ancestors, who had emigrated decades ago, but once sent a letter home together with a sample of his new profession: 3D-Photography. The boy follows his relative's traces by counter-checking the old 3D-Photographs of New York (using an antique viewer) with the same places and how they look today. This way, the audience gets to see the Big Apple in former times as well as today.",
+    "rating": 3.5,
+    "release_date": "1995-10-20",
+    "posterLoc": "AcrosstheSeaofTimePoster"
+  },
+  {
+    "title": "From Dusk Till Dawn",
+    "tags": [
+      "Horror",
+      "Action",
+      "Thriller",
+      "Crime"
+    ],
+    "overview": "Seth Gecko and his younger brother Richard are on the run after a bloody bank robbery in Texas. They escape across the border into Mexico and will be home-free the next morning, when they pay off the local kingpin. They just have to survive 'from dusk till dawn' at the rendezvous point, which turns out to be a Hell of a strip joint.",
+    "rating": 6.9,
+    "release_date": "1996-01-19",
+    "posterLoc": "FromDuskTillDawnPoster"
+  },
+  {
+    "title": "Rumble in the Bronx",
+    "tags": [
+      "Crime",
+      "Action",
+      "Comedy",
+      "Thriller"
+    ],
+    "overview": "Keong comes from Hong Kong to visit New York for his uncle's wedding. His uncle runs a market in the Bronx and Keong offers to help out while Uncle is on his honeymoon. During his stay in the Bronx, Keong befriends a neighbor kid and beats up some neighborhood thugs who cause problems at the market. One of those petty thugs in the local gang stumbles into a criminal situation way over his head.",
+    "rating": 6.5,
+    "release_date": "1995-01-30",
+    "posterLoc": "RumbleintheBronxPoster"
+  },
+  {
+    "title": "Interstellar",
+    "tags": [
+      "Adventure",
+      "Drama",
+      "Science Fiction"
+    ],
+    "overview": "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    "rating": 8.1,
+    "release_date": "2014-11-05",
+    "posterLoc": "InterstellarPoster"
+  },
+  {
+    "title": "Inside Out",
+    "tags": [
+      "Drama",
+      "Comedy",
+      "Animation",
+      "Family"
+    ],
+    "overview": "Growing up can be a bumpy road, and it's no exception for Riley, who is uprooted from her Midwest life when her father starts a new job in San Francisco. Like all of us, Riley is guided by her emotions - Joy, Fear, Anger, Disgust and Sadness. The emotions live in Headquarters, the control center inside Riley's mind, where they help advise her through everyday life. As Riley and her emotions struggle to adjust to a new life in San Francisco, turmoil ensues in Headquarters. Although Joy, Riley's main and most important emotion, tries to keep things positive, the emotions conflict on how best to navigate a new city, house and school.",
+    "rating": 7.9,
+    "release_date": "2015-06-09",
+    "posterLoc": "InsideOutPoster"
+  },
+  {
+    "title": "The American President",
+    "tags": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "overview": "Widowed U.S. president Andrew Shepherd, one of the world's most powerful men, can have anything he wants -- and what he covets most is Sydney Ellen Wade, a Washington lobbyist. But Shepherd's attempts at courting her spark wild rumors and decimate his approval ratings.",
+    "rating": 6.5,
+    "release_date": "1995-11-17",
+    "posterLoc": "TheAmericanPresidentPoster"
+  },
+  {
+    "title": "Dracula: Dead and Loving It",
+    "tags": [
+      "Comedy",
+      "Horror"
+    ],
+    "overview": "When a lawyer shows up at the vampire's doorstep, he falls prey to his charms and joins him in his search for fresh blood. Enter Dr. van Helsing, who may be the only one able to vanquish the count.",
+    "rating": 5.7,
+    "release_date": "1995-12-22",
+    "posterLoc": "DraculaDeadandLovingItPoster"
+  },
+  {
+    "title": "Balto",
+    "tags": [
+      "Family",
+      "Animation",
+      "Adventure"
+    ],
+    "overview": "An outcast half-wolf risks his life to prevent a deadly epidemic from ravaging Nome, Alaska.",
+    "rating": 7.1,
+    "release_date": "1995-12-22",
+    "posterLoc": "BaltoPoster"
+  },
+  {
+    "title": "Nixon",
+    "tags": [
+      "History",
+      "Drama"
+    ],
+    "overview": "An all-star cast powers this epic look at American President Richard M. Nixon, a man carrying the fate of the world on his shoulders while battling the self-destructive demands within. Spanning his troubled boyhood in California to the shocking Watergate scandal that would end his presidency.",
+    "rating": 7.1,
+    "release_date": "1995-12-22",
+    "posterLoc": "NixonPoster"
+  },
+  {
+    "title": "Cutthroat Island",
+    "tags": [
+      "Action",
+      "Adventure"
+    ],
+    "overview": "Morgan Adams and her slave, William Shaw, are on a quest to recover the three portions of a treasure map. Unfortunately, the final portion is held by her murderous uncle, Dawg. Her crew is skeptical of her leadership abilities, so she must complete her quest before they mutiny against her. This is made yet more difficult by the efforts of the British crown to end her pirate raids.",
+    "rating": 5.7,
+    "release_date": "1995-12-22",
+    "posterLoc": "CutthroatIslandPoster"
+  },
+  {
+    "title": "Casino",
+    "tags": [
+      "Drama",
+      "Crime"
+    ],
+    "overview": "The life of the gambling paradise – Las Vegas – and its dark mafia underbelly.",
+    "rating": 7.8,
+    "release_date": "1995-11-22",
+    "posterLoc": "CasinoPoster"
+  },
+  {
+    "title": "Four Rooms",
+    "tags": [
+      "Crime",
+      "Comedy"
+    ],
+    "overview": "It's Ted the Bellhop's first night on the job...and the hotel's very unusual guests are about to place him in some outrageous predicaments. It seems that this evening's room service is serving up one unbelievable happening after another.",
+    "rating": 6.5,
+    "release_date": "1995-12-09",
+    "posterLoc": "FourRoomsPoster"
+  },
+  {
+    "title": "Ace Ventura: When Nature Calls",
+    "tags": [
+      "Crime",
+      "Comedy",
+      "Adventure"
+    ],
+    "overview": "Summoned from an ashram in Tibet, Ace finds himself on a perilous journey into the jungles of Africa to find Shikaka, the missing sacred animal of the friendly Wachati tribe. He must accomplish this before the wedding of the Wachati's Princess to the prince of the warrior Wachootoos. If Ace fails, the result will be a vicious tribal war.",
+    "rating": 6.1,
+    "release_date": "1995-11-10",
+    "posterLoc": "AceVenturaWhenNatureCallsPoster"
+  },
+  {
+    "title": "Money Train",
+    "tags": [
+      "Action",
+      "Comedy",
+      "Crime"
+    ],
+    "overview": "A vengeful New York transit cop decides to steal a trainload of subway fares; his foster brother, a fellow cop, tries to protect him.",
+    "rating": 5.4,
+    "release_date": "1995-11-21",
+    "posterLoc": "MoneyTrainPoster"
+  },
+  {
+    "title": "Get Shorty",
+    "tags": [
+      "Comedy",
+      "Thriller",
+      "Crime"
+    ],
+    "overview": "Chili Palmer is a Miami mobster who gets sent by his boss, the psychopathic \"Bones\" Barboni, to collect a bad debt from Harry Zimm, a Hollywood producer who specializes in cheesy horror films. When Chili meets Harry's leading lady, the romantic sparks fly. After pitching his own life story as a movie idea, Chili learns that being a mobster and being a Hollywood producer really aren't all that different.",
+    "rating": 6.4,
+    "release_date": "1995-10-20",
+    "posterLoc": "GetShortyPoster"
+  },
+  {
+    "title": "Copycat",
+    "tags": [
+      "Drama",
+      "Thriller"
+    ],
+    "overview": "An agoraphobic psychologist and a female detective must work together to take down a serial killer who copies serial killers from the past.",
+    "rating": 6.5,
+    "release_date": "1995-10-27",
+    "posterLoc": "CopycatPoster"
+  },
+  {
+    "title": "Assassins",
+    "tags": [
+      "Action",
+      "Adventure",
+      "Crime",
+      "Thriller"
+    ],
+    "overview": "Assassin Robert Rath arrives at a funeral to kill a prominent mobster, only to witness a rival hired gun complete the job for him -- with grisly results. Horrified by the murder of innocent bystanders, Rath decides to take one last job and then return to civilian life. But finding his way out of the world of contract killing grows ever more dangerous as Rath falls for his female target and becomes a marked man himself.",
+    "rating": 6.0,
+    "release_date": "1995-10-06",
+    "posterLoc": "AssassinsPoster"
+  }
+]
